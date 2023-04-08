@@ -13,21 +13,37 @@ type AppContextType = {
   setToken: (token: string) => void;
   invalidUser: boolean;
   setInvalidUser: (invalidUser: boolean) => void;
+  userHasAccounts: boolean;
+  setUserHasAccounts: (userHasAccounts: boolean) => void;
+  banksList: any;
+  setBanksList: (banksList: any) => void;
+  scrollBanksList: any;
+  setScrollBanksList: (scrollBanksList: any) => void;
+  numberOfScroll: number;
+  setNumberOfScroll: (numberOfScroll: number) => void;
 };
 
 const AppContext: Context<AppContextType> = createContext<AppContextType>({
   email: '',
-  setEmail: () => {},
+  setEmail: () => { },
   password: '',
-  setPassword: () => {},
+  setPassword: () => { },
   visible: false,
-  setVisible: () => {},
+  setVisible: () => { },
   name: '',
-  setName: () => {},
+  setName: () => { },
   token: '',
-  setToken: () => {},
+  setToken: () => { },
   invalidUser: false,
-  setInvalidUser: () => {},
+  setInvalidUser: () => { },
+  userHasAccounts: false,
+  setUserHasAccounts: () => { },
+  banksList: [],
+  setBanksList: () => { },
+  scrollBanksList: [],
+  setScrollBanksList: () => { },
+  numberOfScroll: 1,
+  setNumberOfScroll: () => { },
 });
 
 export default AppContext;
