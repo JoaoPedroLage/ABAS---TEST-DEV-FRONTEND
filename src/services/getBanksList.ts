@@ -1,4 +1,4 @@
-export default async function getBanksList() {
+export default async function getBanksList(): Promise<[]> {
   const URL = `https://brasilapi.com.br/api/banks/v1`;
   const request = await fetch(URL, {
       method: 'GET',
