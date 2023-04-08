@@ -4,7 +4,7 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import Link from 'next/link';
 
-export default function LabelBottomNavigation() {
+export default function HeaderMainPage() {
 
   return (
     <Link href="/list-screen">
