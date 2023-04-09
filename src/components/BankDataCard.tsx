@@ -1,9 +1,32 @@
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
+
+type Account = {
+  ispb: string;
+  name: string;
+  code: string;
+  fullName: string;
+};
 
 export default function BankDataCard({ bank }: any): JSX.Element {
+  
+  function handleCLick() {
+    const AcconuntData: Account = {
+      ispb: bank.ispb,
+      name: bank.name,
+      code: bank.code,
+      fullName: bank.fullName
+    };
+  
+    localStorage.setItem(
+      'bankData',
+      JSON.stringify(AcconuntData)
+    );
+  }
+
   return (
     <>
-      {bank.name &&
+      {bank.name ?
         <div>
           <br />
           <span>
@@ -18,10 +41,19 @@ export default function BankDataCard({ bank }: any): JSX.Element {
               <br />
             </>
           }
-          <button>
-            Selecionar Banco
-          </button>
+          <Link href="/registration-screen">
+            <button
+              type='button'
+              onClick={() => handleCLick()}
+            >
+              Selecionar Banco
+            </button>
+          </Link>
         </div>
+        :
+        <span>
+          {bank.message}
+        </span>
       }
     </>
   )
