@@ -21,6 +21,8 @@ type AppContextType = {
   setScrollBanksList: (scrollBanksList: any) => void;
   numberOfScroll: number;
   setNumberOfScroll: (numberOfScroll: number) => void;
+  code: number;
+  setCode: (code: number) => void;
 };
 
 const AppContext: Context<AppContextType> = createContext<AppContextType>({
@@ -44,6 +46,8 @@ const AppContext: Context<AppContextType> = createContext<AppContextType>({
   setScrollBanksList: () => { },
   numberOfScroll: 1,
   setNumberOfScroll: () => { },
+  code: 0,
+  setCode: () => { },
 });
 
 export default AppContext;

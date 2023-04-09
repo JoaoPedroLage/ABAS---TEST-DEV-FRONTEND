@@ -16,6 +16,7 @@ function AppProvider({ children }: AppProviderProps) {
   const [banksList, setBanksList] = useState([]);
   const [scrollBanksList, setScrollBanksList] = useState([]);
   const [numberOfScroll, setNumberOfScroll] = useState(1);
+  const [code, setCode] = useState(0);
 
   const context = {
     email,
@@ -37,7 +38,9 @@ function AppProvider({ children }: AppProviderProps) {
     scrollBanksList,
     setScrollBanksList,
     numberOfScroll,
-    setNumberOfScroll
+    setNumberOfScroll,
+    code,
+    setCode
   };
 
   return (
