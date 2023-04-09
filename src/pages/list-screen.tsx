@@ -1,8 +1,12 @@
 import BanksList from '@/components/BanksList';
+import SearchBankButton from '@/components/SearchBankButton';
 import React from 'react';
 
-export default function bank() {
+export default function ListScreen() {
   return (
-    <BanksList />
+    <>
+      <SearchBankButton />
+      <BanksList />
+    </>
   )
 }
