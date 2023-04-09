@@ -45,12 +45,14 @@ export default function BanksList() {
         initialLoad={false}
         style={{ width: '100%' }}
       >
-        {scrollBanksList.map((bank: any) => (
-          <BankDataCard
-            key={bank.ispb}
-            bank={bank}
-          />
-        ))}
+        {
+          scrollBanksList.map((bank: any) => (
+            <BankDataCard
+              key={bank.ispb}
+              bank={bank}
+            />
+          ))
+        }
       </InfiniteScroll >
     </>
   )
