@@ -1,5 +1,12 @@
 import { createContext, Context } from 'react';
 
+type selectedBankData = {
+  ispb: string;
+  name: string;
+  code: string
+  fullName: string;
+};
+
 type AppContextType = {
   email: string;
   setEmail: (email: string) => void;
@@ -15,6 +22,8 @@ type AppContextType = {
   setInvalidUser: (invalidUser: boolean) => void;
   userHasAccounts: boolean;
   setUserHasAccounts: (userHasAccounts: boolean) => void;
+  userAccounts: [] | any;
+  setUserAccounts: (userAccounts: [] | any) => void;
   banksList: any;
   setBanksList: (banksList: any) => void;
   scrollBanksList: any;
@@ -23,6 +32,12 @@ type AppContextType = {
   setNumberOfScroll: (numberOfScroll: number) => void;
   code: number;
   setCode: (code: number) => void;
+  selectedBank: selectedBankData | any
+  setSelectedBank: (selectedBank: selectedBankData) => void;
+  bankAgency: string;
+  setBankAgency: (bankAgency: string) => void;
+  bankAccount: string;
+  setBankAccount: (account: string) => void;
 };
 
 const AppContext: Context<AppContextType> = createContext<AppContextType>({
@@ -40,6 +55,8 @@ const AppContext: Context<AppContextType> = createContext<AppContextType>({
   setInvalidUser: () => { },
   userHasAccounts: false,
   setUserHasAccounts: () => { },
+  userAccounts: [],
+  setUserAccounts: () => { },
   banksList: [],
   setBanksList: () => { },
   scrollBanksList: [],
@@ -48,6 +65,17 @@ const AppContext: Context<AppContextType> = createContext<AppContextType>({
   setNumberOfScroll: () => { },
   code: 0,
   setCode: () => { },
+  selectedBank: {
+    ispb: 0,
+    name: '',
+    code: 0,
+    fullName: '',
+  },
+  setSelectedBank: () => { },
+  bankAgency: '',
+  setBankAgency: () => { },
+  bankAccount: '',
+  setBankAccount: () => { }
 });
 
 export default AppContext;

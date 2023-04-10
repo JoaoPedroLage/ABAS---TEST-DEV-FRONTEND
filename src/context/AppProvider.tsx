@@ -13,10 +13,14 @@ function AppProvider({ children }: AppProviderProps) {
   const [token, setToken] = useState('');
   const [invalidUser, setInvalidUser] = useState(false);
   const [userHasAccounts, setUserHasAccounts] = useState(false);
+  const [userAccounts, setUserAccounts] = useState([]);
   const [banksList, setBanksList] = useState([]);
   const [scrollBanksList, setScrollBanksList] = useState([]);
   const [numberOfScroll, setNumberOfScroll] = useState(1);
   const [code, setCode] = useState(0);
+  const [selectedBank, setSelectedBank] = useState({});
+  const [bankAgency, setBankAgency] = useState('');
+  const [bankAccount, setBankAccount] = useState('');
 
   const context = {
     email,
@@ -33,6 +37,8 @@ function AppProvider({ children }: AppProviderProps) {
     setInvalidUser,
     userHasAccounts,
     setUserHasAccounts,
+    userAccounts,
+    setUserAccounts,
     banksList,
     setBanksList,
     scrollBanksList,
@@ -40,7 +46,13 @@ function AppProvider({ children }: AppProviderProps) {
     numberOfScroll,
     setNumberOfScroll,
     code,
-    setCode
+    setCode,
+    selectedBank,
+    setSelectedBank,
+    bankAgency,
+    setBankAgency,
+    bankAccount,
+    setBankAccount
   };
 
   return (
