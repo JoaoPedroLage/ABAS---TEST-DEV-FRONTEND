@@ -1,27 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AppContext from '../context/AppContext';
 import Link from 'next/link';
 
 type Account = {
-  ispb: string;
+  ispb: number;
   name: string;
-  code: string;
+  code: number;
   fullName: string;
 };
 
 export default function BankDataCard({ bank }: any): JSX.Element {
-  
+  const {
+    setNumberOfScroll
+  } = useContext(AppContext);
+
   function handleCLick() {
-    const AcconuntData: Account = {
+    const AccountData: Account = {
       ispb: bank.ispb,
       name: bank.name,
       code: bank.code,
       fullName: bank.fullName
     };
-  
-    localStorage.setItem(
-      'bankData',
-      JSON.stringify(AcconuntData)
-    );
+
+    localStorage.setItem('AccountData', JSON.stringify([AccountData]));
+    setNumberOfScroll(0);
   }
 
   return (
@@ -33,7 +35,8 @@ export default function BankDataCard({ bank }: any): JSX.Element {
             Banco: {bank.name}
           </span>
           <br />
-          {bank.code &&
+          {
+            bank.code &&
             <>
               <span>
                 Código: {bank.code}
@@ -41,7 +44,7 @@ export default function BankDataCard({ bank }: any): JSX.Element {
               <br />
             </>
           }
-          <Link href="/registration-screen">
+          <Link href='/registration-screen'>
             <button
               type='button'
               onClick={() => handleCLick()}
