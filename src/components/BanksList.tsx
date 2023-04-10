@@ -38,7 +38,7 @@ export default function BanksList() {
   return (
     <>
       <InfiniteScroll
-        className="Cards"
+        className='Cards'
         loadMore={updateScrollBanksList}
         hasMore={true}
         threshold={50}

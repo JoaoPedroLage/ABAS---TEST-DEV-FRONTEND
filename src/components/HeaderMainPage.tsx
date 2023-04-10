@@ -7,13 +7,13 @@ import Link from 'next/link';
 export default function HeaderMainPage() {
 
   return (
-    <Link href="/list-screen">
+    <Link href='/list-screen'>
       <BottomNavigation
         sx={{ width: 500, height: 200 }}
         showLabels={true}
       >
         <BottomNavigationAction
-          label="Cadastrar uma nova conta bancária"
+          label='Cadastrar uma nova conta bancária'
           icon={<AccountBalanceIcon />}
         />
       </BottomNavigation>
