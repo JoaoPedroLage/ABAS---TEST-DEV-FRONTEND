@@ -33,25 +33,33 @@ export default function RegistrationBankCard() {
   function submitAccount(event: FormEvent) {
     event.preventDefault();
 
-    const userAccountData = {
-      bankName: selectedBank.fullName,
-      bankCode: selectedBank.code,
-      bankAgency: bankAgency,
-      bankAccount: bankAccount
-    };
+    const regexAgency = /^\d{1,5}-?\d*$/;
+    const regexAccount = /^\d{6,8}-?\d*$/;
 
-    const userAccountsData = JSON.parse(localStorage.getItem('userAccounts') || '[]');
+    if (regexAgency.test(bankAgency.toString()) && regexAccount.test(bankAccount.toString())) {
 
-    if (userAccountsData) {
-      const newArray = [...userAccountsData, userAccountData];
+      const userAccountData = {
+        bankName: selectedBank.fullName,
+        bankCode: selectedBank.code,
+        bankAgency: bankAgency,
+        bankAccount: bankAccount
+      };
 
-      localStorage.setItem('userAccounts', JSON.stringify(newArray))
+      const userAccountsData = JSON.parse(localStorage.getItem('userAccounts') || '[]');
+
+      if (userAccountsData) {
+        const newArray = [...userAccountsData, userAccountData];
+
+        localStorage.setItem('userAccounts', JSON.stringify(newArray))
+      } else {
+        localStorage.setItem('userAccounts', JSON.stringify([userAccountData]));
+
+      }
+
+      router.push('/sucess-registration')
     } else {
-      localStorage.setItem('userAccounts', JSON.stringify([userAccountData]));
-
+      alert('Agência ou conta inválidas! Corriga e tente novamente.');
     }
-
-    router.push('/sucess-registration')
   }
 
   useEffect(() => {
@@ -69,23 +77,27 @@ export default function RegistrationBankCard() {
         <br />
         <span>Nome completo do Banco: {selectedBank.fullName}</span>
         <br />
+        <span>Agência do banco:&nbsp;</span>
         <input
           placeholder='Agência do banco'
-          type='number'
+          type='text'
+          pattern='[0-9-]*'
           onChange={(event) => setBankAgency(event.target.value)}
         />
         <br />
+        <span>Conta de cadastro com ou sem dígito:&nbsp;</span>
         <input
           placeholder='Conta de cadastro'
-          type='number'
+          type='text'
+          pattern='[0-9-]*'
           onChange={(event) => setBankAccount(event.target.value)}
         />
         <br />
-          <button
-            type='submit'
-          >
-            Cadastrar Conta
-          </button>
+        <button
+          type='submit'
+        >
+          Cadastrar Conta
+        </button>
       </form>
     </>
   );
