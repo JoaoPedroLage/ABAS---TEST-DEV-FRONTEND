@@ -14,12 +14,16 @@
 }
 
 .button-search-bank {
+  height: 50px;
+  width: 100px;
   padding: 10px;
   font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #f2c30d;
+  font-weight: bold;
+  color: #212529;
   border: none;
-  border-radius: 5px;
+  border-color: #F2C30D;
+  border-radius: 20px;
   cursor: pointer;
 }
 
@@ -69,8 +73,32 @@
 .card button {
   padding: 10px;
   font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #411c54;
+  color: #FFFFFF;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.card-come-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.card-come-back button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #411c54;
+  color: #FFFFFF;
   border: none;
   border-radius: 5px;
   cursor: pointer;

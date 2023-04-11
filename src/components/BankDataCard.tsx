@@ -9,7 +9,7 @@ type Account = {
   fullName: string;
 };
 
-export default function BankDataCard({ bank }: any): JSX.Element {
+export default function BankDataCard({ bank, index }: any): JSX.Element {
   const {
     setNumberOfScroll
   } = useContext(AppContext);
@@ -31,6 +31,7 @@ export default function BankDataCard({ bank }: any): JSX.Element {
       {bank.name ?
         <div
           className='card'
+          key={index}
         >
           <br />
           <span>
@@ -56,9 +57,23 @@ export default function BankDataCard({ bank }: any): JSX.Element {
           </Link>
         </div>
         :
-        <span>
-          {bank.message}
-        </span>
+        <>
+          <div className="">
+            <span>
+              {bank.message}
+            </span>
+            <div
+              className='card-come-back'
+            >
+              <button
+                type='button'
+                onClick={() => document.location.reload()}
+              >
+                Voltar à lista
+              </button>
+            </div>
+          </div>
+        </>
       }
     </>
   )
