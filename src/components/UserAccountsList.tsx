@@ -15,12 +15,17 @@ export default function AccountsList(): JSX.Element {
 
   function getAccountsList(): void {
 
-    const userStorage = localStorage.getItem('userAccounts');
-    if (!userStorage) {
+    const userStorage = JSON.parse(localStorage.getItem('userAccounts') || '[]');
+    if (userStorage) {
+      if (userStorage.length === 0) {
+        setUserHasAccounts(false);
+      } else {
+        setUserHasAccounts(true);
+        setUserAccounts(userStorage);
+      }
+    }
+    else {
       setUserHasAccounts(false);
-    } else {
-      setUserHasAccounts(true);
-      setUserAccounts(JSON.parse(userStorage));
     }
   }
 
@@ -38,11 +43,15 @@ export default function AccountsList(): JSX.Element {
   return (
     <>
       {
-        !userHasAccounts ?
-          <span>Usuário não tem contas cadastradas</span>
+        !userHasAccounts || userAccounts.length === 0 ?
+            <div className="not-found">
+              <div className="not-found-text">
+                <span>Usuário não tem contas cadastradas</span>
+              </div>
+            </div>
           :
           <InfiniteScroll
-            className='Cards'
+            className='cards-main-page'
             loadMore={updateScrollBanksList}
             hasMore={true}
             threshold={50}
