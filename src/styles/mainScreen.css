@@ -70,6 +70,13 @@
 }
 
 @media screen and (max-width: 768px) {
+  .navbar-button-background {
+    background-color: #411c54;
+    border-radius: 20px;
+    border: 1px solid;
+    max-width: 60vw;
+  }
+
   .not-found {
     margin-top: 5vh;
     font-size: 18px;
@@ -87,6 +94,7 @@
   .cards-main-page {
     margin-top: 10px;
     padding: 5px;
+    max-width: 50vw;
   }
 
   .card-main-page {
