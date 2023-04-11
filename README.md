@@ -84,7 +84,7 @@ Dentro do que foi requerido para o projeto:
 - Utilizar corretamente o inifinite scroller e corrigir todos os bugs decorrentes ao longo do desenvolvimento da aplicação.
 - Correção de bugs ao longo do desenvolvimento através de diversos testes utilizando cada rota da aplicação.
 
-#  :deploy: <img src="https://cdn.changelog.com/uploads/icons/news_sources/qGw/icon_small.png?v=63692097118" width='40px'/> &nbsp;Deploy no Vercel
+#  <img src="https://cdn.changelog.com/uploads/icons/news_sources/qGw/icon_small.png?v=63692097118" width='40px'/> &nbsp;Deploy no Vercel
 * A API foi colocada online através do Next.js e do Vercel que trabalham juntos, o uso do Next fez com que o deploy da aplicação fosse mais fácil e de fácil manutenibilidade.
 * Endereço online da aplicação: https://joao-lage-test-abas.vercel.app/
 
@@ -95,10 +95,10 @@ Dentro do que foi requerido para o projeto:
 
 1. Clone o repositório
   * `git clone git@github.com:JoaoPedroLage/ABAS---TEST-DEV-FRONTEND.git`
-  * Entre na pasta do repositório que você acabou de clonar:
+  * Entre na pasta do repositório que você acabou de clonar
 
 2. Instale as dependências e inicialize
-  * Instale as dependências no back-end:
+  * Instale as dependências:
     * `yarn/npm install`
   * Inicialize o projeto:
    * `yarn/npm dev`
