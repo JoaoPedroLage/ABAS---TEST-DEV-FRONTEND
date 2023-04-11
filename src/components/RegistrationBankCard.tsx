@@ -68,37 +68,44 @@ export default function RegistrationBankCard() {
 
   return (
     <>
-      <form onSubmit={(e) => submitAccount(e)}>
-        <span>ISPB do Banco: {selectedBank.ispb}</span>
-        <br />
-        <span>Código do Banco: {selectedBank.code}</span>
-        <br />
-        <span>Nome do Banco: {selectedBank.name}</span>
-        <br />
-        <span>Nome completo do Banco: {selectedBank.fullName}</span>
-        <br />
-        <span>Agência do banco:&nbsp;</span>
-        <input
-          placeholder='Agência do banco'
-          type='text'
-          pattern='[0-9-]*'
-          onChange={(event) => setBankAgency(event.target.value)}
-        />
-        <br />
-        <span>Conta de cadastro com ou sem dígito:&nbsp;</span>
-        <input
-          placeholder='Conta de cadastro'
-          type='text'
-          pattern='[0-9-]*'
-          onChange={(event) => setBankAccount(event.target.value)}
-        />
-        <br />
-        <button
-          type='submit'
+      <div
+        className='registration-screen'
+      >
+        <form
+          className='card'
+          onSubmit={(e) => submitAccount(e)}
         >
-          Cadastrar Conta
-        </button>
-      </form>
+          <span>ISPB do Banco: {selectedBank.ispb}</span>
+          <br />
+          <span>Código do Banco: {selectedBank.code}</span>
+          <br />
+          <span>Nome do Banco: {selectedBank.name}</span>
+          <br />
+          <span>Nome completo do Banco: {selectedBank.fullName}</span>
+          <br />
+          <span>Agência do banco:&nbsp;</span>
+          <input
+            placeholder='Agência do banco'
+            type='text'
+            pattern='[0-9-]*'
+            onChange={(event) => setBankAgency(event.target.value)}
+          />
+          <br />
+          <span>Conta de cadastro com ou sem dígito:&nbsp;</span>
+          <input
+            placeholder='Conta de cadastro'
+            type='text'
+            pattern='[0-9-]*'
+            onChange={(event) => setBankAccount(event.target.value)}
+          />
+          <br />
+          <button
+            type='submit'
+          >
+            Cadastrar Conta
+          </button>
+        </form>
+      </div>
     </>
   );
 }
