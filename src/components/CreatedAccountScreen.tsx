@@ -19,15 +19,24 @@ export default function CreatedAccountScreen() {
 
   return (
     <>
-    <span>Conta cadastrada com sucesso!</span>
-    <Link href='/'>
-      <br />
-      <button
-        type='button'
+      <div
+        className='created-account-container'
       >
-        Voltar para a página inicial
-      </button>
-    </Link>
-  </>
+        <span
+          className='success-message'
+        >
+          Conta cadastrada com sucesso!
+        </span>
+        <Link href='/'>
+          <br />
+          <button
+            className='back-button'
+            type='button'
+          >
+            Voltar para a página inicial
+          </button>
+        </Link>
+      </div>
+    </>
   )
 }
