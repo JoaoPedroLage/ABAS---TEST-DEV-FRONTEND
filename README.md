@@ -7,8 +7,6 @@ por João Lage
 
 ### Tópicos
 
-- [Imagens do projeto](#camera-imagens-do-projeto)
-
 - [Descrição do projeto](#man_dancing-descrição-do-projeto)
 
 - [Melhorias possíveis](#construction-melhorias-possíveis)
@@ -24,25 +22,10 @@ por João Lage
 - [Feedback sobre o desafio](#recycle-feedback-sobre-o-desafio)
 
 
-# :camera: Imagens do projeto
-
-<spam>
-  <img src="/images/GET-tickets.png" alt="GET de ingressos" width="1000"/>
-  <img src="/images/POST-login.png" alt="POST para validação do token" width="1000"/>
-</spam>
 
 # :man_dancing: Descrição do Projeto
 
 Desafio técnico da empresa ABAS que consiste em criar um app para o cadastro de contas bancárias pessoais.
-
-- Front-end:
-  * a API REST de uma aplicação na AWS baseado em microserviços e containers que forneça os serviços de:
-  * CRUD de clientes,
-  * CRUD de carrinhos (que serão usados pelos clientes)
-  * e CRUD de ingressos para os eventos.
-  * É importante enfatizar que a criação de ingressos só pode ser feita por um usuário administrador.:
-
-
 
 O que foi realizado:
 - [x] Setup do projeto com arquitetura de software
@@ -67,12 +50,16 @@ O que foi realizado:
 - Implementar mais validações e mensagens de erro para as requisições do usuário.
 - Implentar uma interface funcional no front-end para ser amigável e interessante ao usuário/clientes.
 
+
+
 # :books: Stacks utilizadas
 
 ### Front-end
 - [ReactJs](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [NextJS](https://nextjs.org/)
+- [MUI](https://mui.com/)
+- [Bootstrap](https://getbootstrap.com/)
 
 
 
@@ -87,6 +74,8 @@ O que foi realizado:
 * Endereço da API online: http://18.228.192.201:3001
 * Teste uma requisição para a rota `tickets` no seguinte endereço:
 http://18.228.192.201:3001/tickets
+
+
 
 # 🛠️ Abrir e rodar o projeto
 
