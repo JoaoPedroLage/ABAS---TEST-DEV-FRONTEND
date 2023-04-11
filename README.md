@@ -99,9 +99,9 @@ Dentro do que foi requerido para o projeto:
 
 2. Instale as dependências e inicialize
   * Instale as dependências:
-    * `yarn/npm install`
+    * `yarn install / npm install`
   * Inicialize o projeto:
-   * `yarn/npm dev`
+   * `yarn dev / npm run dev`
 
 # :recycle: Feedback sobre o desafio
 
