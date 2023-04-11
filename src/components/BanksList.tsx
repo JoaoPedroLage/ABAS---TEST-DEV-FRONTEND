@@ -39,16 +39,16 @@ export default function BanksList() {
     <>
       <InfiniteScroll
         className='cards'
+        loader={<h4 key={'000'}>Loading...</h4>}
         loadMore={updateScrollBanksList}
         hasMore={true}
-        threshold={100}
+        threshold={50}
         initialLoad={false}
-        style={{ width: '100%' }}
-      >
+        style={{ width: '100%' }}      >
         {
-          scrollBanksList.map((bank: any) => (
+          scrollBanksList.map((bank: any, index: number) => (
             <BankDataCard
-              key={bank.ispb}
+              key={index}
               bank={bank}
             />
           ))
