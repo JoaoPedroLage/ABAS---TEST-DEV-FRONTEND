@@ -1,0 +1,69 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vh;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.not-found-text {
+  max-width: 400px;
+  text-align: center;
+}
+
+.navbar-button-background {
+  background-color: #411c54;
+  border-radius: 20px;
+}
+
+.navbar-button {
+  background-color: #F2C30D;
+  align-self: center;
+  padding: 10px;
+  height: 80%;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #212529;
+}
+
+.cards-main-page {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.card-main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.input-button {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.input-button input {
+  padding-right: 20px;
+}
+.input-button span {
+  padding-right: 20px;
+}
+
