@@ -50,14 +50,15 @@ export default function AccountsList(): JSX.Element {
             </div>
           </div>
           :
-          <InfiniteScroll
-            className='cards-main-page'
-            loadMore={updateScrollBanksList}
-            hasMore={true}
-            threshold={50}
-            initialLoad={false}
-            style={{ width: '100%' }}
-          >
+          // <InfiniteScroll
+          //   className='cards-main-page'
+          //   loadMore={updateScrollBanksList}
+          //   hasMore={true}
+          //   threshold={50}
+          //   initialLoad={false}
+          //   style={{ width: '100%' }}
+          // >
+          <div className='cards-main-page'>
             {
               userAccounts.map((bank: any, index: number) => (
                 <UserBankDataCard
@@ -66,7 +67,8 @@ export default function AccountsList(): JSX.Element {
                 />
               ))
             }
-          </InfiniteScroll >
+            </div>
+          // </InfiniteScroll >
       }
     </>
   );
