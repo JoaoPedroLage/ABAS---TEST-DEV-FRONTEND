@@ -15,16 +15,33 @@ export default function BankDataCard({ bank }: any): JSX.Element {
 
   const userAccountsData = JSON.parse(localStorage.getItem('userAccounts') || '[]');
 
-  function deleteAccount() {
+  type Account = {
+    bankAccount: string;
+    bankCode: string;
+  };
+
+  const removeAccount = (): void => {
     const positionFound = userAccountsData.findIndex(
-      (account: any) => account.bankAccount === bank.bankAccount && account.bankCode === bank.bankCode
-      );
+      (account: Account) => account.bankAccount === bank.bankAccount && account.bankCode === bank.bankCode
+    );
 
-    const filteredArray = userAccountsData.filter((_obj: any, index: number) => index !== positionFound);
+    if (positionFound !== -1) {
+      let filteredArray: Account[] = [];
 
-    localStorage.setItem('userAccounts', JSON.stringify(filteredArray));
-    setUserAccounts(filteredArray);
-  }
+      if (positionFound === 0) {
+
+        filteredArray = userAccountsData.slice(1);
+      } else {
+        filteredArray = [
+          ...userAccountsData.slice(0, positionFound),
+          ...userAccountsData.slice(positionFound + 1)
+        ];
+      }
+      
+      localStorage.setItem('userAccounts', JSON.stringify(filteredArray));
+      setUserAccounts(filteredArray);
+    }
+  };
 
   function editAgency() {
     const userAccountData = userAccountsData.filter((account: any) => {
@@ -56,7 +73,9 @@ export default function BankDataCard({ bank }: any): JSX.Element {
     <>
       {
         <>
-          <div>
+          <div
+            className='card-main-page'
+          >
             <br />
             <span>
               Banco: {bank.bankName}
@@ -69,83 +88,85 @@ export default function BankDataCard({ bank }: any): JSX.Element {
               </span>
             }
             <br />
-            {isEditingAgency ?
-              <>
+            <div
+              className='input-button'
+            >
+              {isEditingAgency ?
+                <>
+                  <span>
+                    Agência: &nbsp;
+                  </span>
+                  <input
+                    value={newBankAgency}
+                    onChange={(e) => setNewBankAgency(e.target.value)}
+                  >
+                  </input>
+                </>
+                :
                 <span>
-                  Agência: &nbsp;
+                  Agência: {newBankAgency}
                 </span>
-                <input
-                  value={newBankAgency}
-                  onChange={(e) => setNewBankAgency(e.target.value)}
+              }
+              {isEditingAgency ?
+                <button
+                  className='edit-button'
+                  type='button'
+                  onClick={() => editAgency()}
                 >
-                </input>
-              </>
-
-              :
-              <span>
-                Agência: {newBankAgency}
-              </span>
-            }
-            {isEditingAgency ?
-              <button
-                className='edit-button'
-                type='button'
-                onClick={() => editAgency()}
-              >
-                OK
-              </button>
-              :
-              <button
-                className='edit-button'
-                type='button'
-                onClick={() => setIsEditingAgency(true)}
-              >
-                <EditSVG />
-              </button>
-
-            }
+                  OK
+                </button>
+                :
+                <button
+                  className='edit-button'
+                  type='button'
+                  onClick={() => setIsEditingAgency(true)}
+                >
+                  <EditSVG />
+                </button>
+              }
+            </div>
             <br />
-            {isEditingAccount ?
-              <>
+            <div
+              className='input-button'
+            >
+              {isEditingAccount ?
+                <>
+                  <span>
+                    Conta: &nbsp;
+                  </span>
+                  <input
+                    value={newBankAccount}
+                    onChange={(e) => setNewBankAccount(e.target.value)}
+                  >
+                  </input>
+                </>
+                :
                 <span>
-                  Conta: &nbsp;
+                  Conta: {newBankAccount}
                 </span>
-                <input
-                  value={newBankAccount}
-                  onChange={(e) => setNewBankAccount(e.target.value)}
+              }
+              {isEditingAccount ?
+                <button
+                  className='edit-button'
+                  type='button'
+                  onClick={() => editAccount()}
                 >
-                </input>
-              </>
-
-              :
-              <span>
-                Conta: {newBankAccount}
-              </span>
-            }
-            {isEditingAccount ?
-              <button
-                className='edit-button'
-                type='button'
-                onClick={() => editAccount()}
-
-              >
-                OK
-              </button>
-              :
-              <button
-                className='edit-button'
-                type='button'
-                onClick={() => setIsEditingAccount(true)}
-              >
-                <EditSVG />
-              </button>
-            }
-          </div>
-          <div>
+                  OK
+                </button>
+                :
+                <button
+                  className='edit-button'
+                  type='button'
+                  onClick={() => setIsEditingAccount(true)}
+                >
+                  <EditSVG />
+                </button>
+              }
+            </div>
             <button
               className='delete-button'
               type='button'
-              onClick={() => deleteAccount()}
+              onClick={() => removeAccount()}
             >
               <DeleteSVG />
             </button>
