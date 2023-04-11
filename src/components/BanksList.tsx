@@ -40,7 +40,7 @@ export default function BanksList() {
       <InfiniteScroll
         className='cards'
         loader={
-          scrollBanksList.length > 0 && !scrollBanksList[0].hasOwnProperty("message") ?
+          scrollBanksList.length === 0 ?
             <h4 key={'000'}>Loading...</h4>
             :
             <span></span>
