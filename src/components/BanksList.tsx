@@ -21,7 +21,7 @@ export default function BanksList() {
   }
 
   function updateScrollBanksList() {
-    const newScroll = banksList.slice(0, 10 * numberOfScroll);
+    const newScroll = banksList.slice(0, 20 * numberOfScroll);
 
     setScrollBanksList(newScroll);
     setNumberOfScroll(numberOfScroll + 1);
@@ -38,10 +38,10 @@ export default function BanksList() {
   return (
     <>
       <InfiniteScroll
-        className='Cards'
+        className='cards'
         loadMore={updateScrollBanksList}
         hasMore={true}
-        threshold={50}
+        threshold={100}
         initialLoad={false}
         style={{ width: '100%' }}
       >
