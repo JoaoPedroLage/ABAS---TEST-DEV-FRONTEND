@@ -44,11 +44,11 @@ export default function AccountsList(): JSX.Element {
     <>
       {
         !userHasAccounts || userAccounts.length === 0 ?
-            <div className="not-found">
-              <div className="not-found-text">
-                <span>Usuário não tem contas cadastradas</span>
-              </div>
+          <div className="not-found">
+            <div className="not-found-text">
+              <span>Usuário não tem contas cadastradas</span>
             </div>
+          </div>
           :
           <InfiniteScroll
             className='cards-main-page'
