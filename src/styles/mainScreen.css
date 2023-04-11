@@ -16,10 +16,11 @@
 .navbar-button-background {
   background-color: #411c54;
   border-radius: 20px;
+  border: 1px solid;
 }
 
 .navbar-button {
-  background-color: #F2C30D;
+  background-color: #f2c30d;
   align-self: center;
   padding: 10px;
   height: 80%;
@@ -63,7 +64,7 @@
 .input-button input {
   padding-right: 20px;
 }
+
 .input-button span {
   padding-right: 20px;
 }
-
