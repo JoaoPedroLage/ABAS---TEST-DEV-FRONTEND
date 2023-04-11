@@ -59,8 +59,6 @@
 .input-button {
   display: flex;
   padding-bottom: 10px;
-  width: 100%;
-  justify-content: center;
 }
 
 .input-button input {
@@ -96,10 +94,11 @@
   .cards-main-page {
     margin-top: 10px;
     padding: 5px;
-    max-width: 60vw;
+    width: 100%;
   }
 
   .card-main-page {
+    max-width: 90vw;
     width: 100%;
     margin: 5px;
     padding: 10px;
@@ -107,8 +106,7 @@
 
   .input-button {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding-bottom: 10px;
   }
 
   .input-button input {
