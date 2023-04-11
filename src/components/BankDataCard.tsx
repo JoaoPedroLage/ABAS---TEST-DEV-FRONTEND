@@ -29,7 +29,9 @@ export default function BankDataCard({ bank }: any): JSX.Element {
   return (
     <>
       {bank.name ?
-        <div>
+        <div
+          className='card'
+        >
           <br />
           <span>
             Banco: {bank.name}
