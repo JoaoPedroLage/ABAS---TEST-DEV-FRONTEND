@@ -1,4 +1,4 @@
-# :package: Desafio técnico: ABAS - DEV-FRONTEND
+# :package: BANK BYTE
 por João Lage
 
 <p align="center">
@@ -25,7 +25,7 @@ por João Lage
 
 # :books: Descrição do Projeto
 
-Desafio técnico da empresa ABAS que consiste em criar um app para o cadastro de contas bancárias pessoais.
+O projeto consiste em um app para criar o cadastro de contas bancárias pessoais.
 
 O que foi realizado:
 - [x] Uso do framework Next.js para ter:
@@ -40,7 +40,7 @@ O que foi realizado:
 - [X] Responsividade da aplicação para dispositivos movéis e desktop.
 - [X] Componentização das partes de cada tela do projeto.
 
-Dentro do que foi requerido para o projeto:
+O que foi pensado para o projeto:
 - [X] Tela Inicial: A tela inicial deverá listar todas as contas bancárias cadastradas na aplicação.
 - [X] No topo da tela inicial deverá possuir um botão para cadastrar uma nova conta bancária. Ao clicar neste botão o usuário deverá ser direcionado para __Tela de Listagem __
 - [X] As contas cadastradas deverão ser exibidas abaixo do botão de cadastrar nova conta e ficarão armazenadas no local storage do dispositivo. O cadastro das contas serão realizadas conforme as funcionalidades descritas abaixo.
@@ -56,14 +56,6 @@ Dentro do que foi requerido para o projeto:
 - [x] Abaixo das informações do banco deverá existir dois campos para o usuário informar a agencia e conta de cadastro.
 - [x] Abaixo dos campos deverá possuir um botão para cadastrar a conta.
 - [x] O cadastro da conta deverá ser armazenado no local storage do dispositivo - Armazenar (Codigo do Banco, Agencia e Conta).
-
-# :construction: Melhorias possíveis:
-
-- Testes para as rotas e os requisitos do projeto (pretendo ainda realizar estes testes).
-- Criar uma tela de login e cadastro de usuário.
-- Adicionar um banco de dados MongoDB a aplicação e salvar os dados de cada usuário.
-- Utilizar o Railway para criar o banco de dados mencionado e criar um Back-end para as requisições e assim salvar dados do usuário.
-- Utilizar o Figma para otimizar a experiência do usuário e design da aplicação.
 
 
 # :books: Stacks utilizadas
@@ -102,9 +94,3 @@ Dentro do que foi requerido para o projeto:
     * `yarn install / npm install`
   * Inicialize o projeto:
    * `yarn dev / npm run dev`
-
-# :recycle: Feedback sobre o desafio
-
-- Para esse desafio tomei a decisão de me inspirar na página da ABAS do setor financeiro, https://abas.online/segmento/financeiro/, utilizei cores, fontes e até ícones no meu projeto inspiradas nas dessa página, estudei sobre a empresa, procurando adaptar o meu projeto e as minhas ideias no formato da empresa.
-- Utilizei o Figma como Scrum e criei um link para convidados, https://trello.com/invite/b/VVWOYs9m/ATTI5b0c5eda261ca1741265894010b3b0c6758945F3/abas-test-dev-frontend, para assim os avaliadores acompanharem meu processo e minha organização. Demonstro assim meu gosto por metodologias agéis e organização de squads.
-- Gostei muito do meu desenvolvimento e da proposta desse projeto, pretendo adaptá-lo e colocar no meu portfólio. Agradeço imensamente pela oportunidade e todo aprendizado que desenvolvi nesse projeto.
