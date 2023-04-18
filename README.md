@@ -19,9 +19,6 @@ por João Lage
 
 - [Deploy na Vercel](#deploy)
 
-- [Feedback sobre o desafio](#recycle-feedback-sobre-o-desafio)
-
-
 
 # :books: Descrição do Projeto
 
