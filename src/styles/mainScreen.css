@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10vh;
+  margin-top: 5vh;
   font-size: 24px;
   font-weight: bold;
   color: #333;
@@ -69,6 +69,17 @@
   padding-right: 20px;
 }
 
+.registrado-info {
+  width: 500px;
+}
+
+.inline {
+  display: inline;
+  height: min-content;
+  width: min-content;
+  color: blue;
+}
+
 @media screen and (max-width: 768px) {
   .navbar-button-background {
     background-color: #411c54;
@@ -78,12 +89,17 @@
   }
 
   .not-found {
-    margin-top: 5vh;
+    margin-top: 2vh;
     font-size: 18px;
   }
 
   .not-found-text {
     max-width: 300px;
+  }
+
+  .registrado-info {
+    max-width: 80vw;
+    font-size: 10px;
   }
 
   .navbar-button {
