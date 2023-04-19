@@ -1,4 +1,4 @@
-# :package: Desafio técnico: ABAS - DEV-FRONTEND
+# :package: BANK BYTE
 por João Lage
 
 <p align="center">
@@ -7,7 +7,7 @@ por João Lage
 
 ### Tópicos
 
-- [Descrição do projeto](#man_dancing-descrição-do-projeto)
+- [Descrição do projeto](#books-descrição-do-projeto)
 
 - [Melhorias possíveis](#construction-melhorias-possíveis)
 
@@ -17,39 +17,42 @@ por João Lage
 
 - [Abrir e rodar o projeto](#%EF%B8%8F-abrir-e-rodar-o-projeto)
 
-- [Deploy na Vercel](#%EF%B8%8F-deploy-vercel)
-
-- [Feedback sobre o desafio](#recycle-feedback-sobre-o-desafio)
+- [Deploy na Vercel](#deploy)
 
 
+# :books: Descrição do Projeto
 
-# :man_dancing: Descrição do Projeto
-
-Desafio técnico da empresa ABAS que consiste em criar um app para o cadastro de contas bancárias pessoais.
+O projeto consiste em um app para criar o cadastro de contas bancárias pessoais.
 
 O que foi realizado:
-- [x] Setup do projeto com arquitetura de software
-- [x] Configuração do banco de dados
-- [x] Dockerizar aplicação
-- [x] Tipar todos arquivos corretamente
-- [x] Criar classes abstratas para o modelo MSC (models, services e controllers )
-- [x] Adicionar linter ao projeto
-- [x] Fazer validações com Zod
-- [x] CRUD de clientes
-- [x] CRUD de carrinhos
-- [x] CRUD de ingressos para os eventos
-- [x] Servidor cloud EC2 na AWS
-- [X] Criação de ingressos só pode ser feita por um usuário administrador
+- [x] Uso do framework Next.js para ter:
+   * Agilidade de desenvolvimento através da divisão do código.
+   * Otimizado para tráfego orgânico e com ótima experiência ao usuário.
+   * Carregamento acelerado.
+- [x] Setup do projeto com arquitetura de software.
+- [x] Dockerizar aplicação.
+- [x] Tipagem de todos arquivos.
+- [x] Adicionar linter ao projeto.
+- [x] Deploy cloud na Vercel.
+- [X] Responsividade da aplicação para dispositivos movéis e desktop.
+- [X] Componentização das partes de cada tela do projeto.
 
+O que foi pensado para o projeto:
+- [X] Tela Inicial: A tela inicial deverá listar todas as contas bancárias cadastradas na aplicação.
+- [X] No topo da tela inicial deverá possuir um botão para cadastrar uma nova conta bancária. Ao clicar neste botão o usuário deverá ser direcionado para __Tela de Listagem __
+- [X] As contas cadastradas deverão ser exibidas abaixo do botão de cadastrar nova conta e ficarão armazenadas no local storage do dispositivo. O cadastro das contas serão realizadas conforme as funcionalidades descritas abaixo.
+- [X] Se não existir conta cadastrada deverá exibir uma mensagem de que não existe conta cadastrada logo abaixo ao botão de cadastro de nova conta do topo da tela.
 
+- [X] Tela de Listagem: Apresentar um tela de listagem de todos os bancos para que seja selecionado um banco para o cadastro.
+- [x] Para listagem de todos os bancos deverá ser utilizada a api pública: https://brasilapi.com.br/api/banks/v1.
+- [x] No topo da tela de listagem, deverá existir um campo com um botão para consulta do banco pelo código do banco. Este campo receberá o código do banco e ao clicar no botão irá apresentar apenas o banco consultado na tela de listagem. Para consultar o banco através do código deverá ser utilizada a api pública: https://brasilapi.com.br/api/banks/v1/{code}.
+- [x] Ao clicar em um banco da tela de listagem o usuário deverá ser redirecionado para a para __Tela de Cadastro __.
 
-# :construction: Melhorias possíveis:
-
-- Testes para o back-end.
-- Melhorar a tipagem dos objetos que os métodos das classes recebem.
-- Implementar mais validações e mensagens de erro para as requisições do usuário.
-- Implentar uma interface funcional no front-end para ser amigável e interessante ao usuário/clientes.
-
+   Tela de Cadastro: Cadastro da conta.
+- [x] Nesta tela deverá exibir todas as informações do banco retornadas pela api.
+- [x] Abaixo das informações do banco deverá existir dois campos para o usuário informar a agencia e conta de cadastro.
+- [x] Abaixo dos campos deverá possuir um botão para cadastrar a conta.
+- [x] O cadastro da conta deverá ser armazenado no local storage do dispositivo - Armazenar (Codigo do Banco, Agencia e Conta).
 
 
 # :books: Stacks utilizadas
@@ -65,44 +68,26 @@ O que foi realizado:
 
 # Etapa mais desafiadora
 
-- Utilizar o TypeScript com excelencia e aplicar POO para criar uma aplicação de fácil manutenibilidade e com facilidade para implentar novas features.
+- Utilizar o TypeScript com excelência e tipar corretamente para assim melhorar a manutenibilidade e ter facilidade para implentar novas features.
 - Garantir que todas as funções estão se comunicando com coerência e gerando os resultados esperados.
-- Aprender sobre AWS e o seu ecossistema.
+- Utilizar corretamente o inifinite scroller e corrigir todos os bugs decorrentes ao longo do desenvolvimento da aplicação.
+- Correção de bugs ao longo do desenvolvimento através de diversos testes utilizando cada rota da aplicação.
 
-#  <img src="https://dqw5z6tkg7aeo.cloudfront.net/icon/d88319dfa5d204f019b4284149886c59-7d586ea82f792b61a8c87de60565133d.svg"/> &nbsp;Servidor AWS
-* A API foi colocada online através do serviço EC2 (Amazon Elastic Compute Cloud) da AWS que criou um servidor online que também possui um banco de dados para guardar as informações.
-* Endereço da API online: http://18.228.192.201:3001
-* Teste uma requisição para a rota `tickets` no seguinte endereço:
-http://18.228.192.201:3001/tickets
+#  <img src="https://cdn.changelog.com/uploads/icons/news_sources/qGw/icon_small.png?v=63692097118" width='40px'/> &nbsp;Deploy no Vercel
+* A API foi colocada online através do Next.js e do Vercel que trabalham juntos, o uso do Next fez com que o deploy da aplicação fosse mais fácil e de fácil manutenibilidade.
+* Endereço online da aplicação: https://joao-lage-test-abas.vercel.app/
+
 
 
 
 # 🛠️ Abrir e rodar o projeto
 
 1. Clone o repositório
-  * `git clone git@github.com:JoaoPedroLage/RadarFit-Olimpiadas-Joao-Lage.git`
-  * Entre na pasta do repositório que você acabou de clonar:
-    * `cd backend`
+  * `git clone git@github.com:JoaoPedroLage/ABAS---TEST-DEV-FRONTEND.git`
+  * Entre na pasta do repositório que você acabou de clonar
 
 2. Instale as dependências e inicialize
-  * Instale as dependências no back-end:
-    * `npm install`
+  * Instale as dependências:
+    * `yarn install / npm install`
   * Inicialize o projeto:
-    * Inicialize o seu servidor MySQL
-    * Coloque as suas variáveis de ambiente em um arquivo `.env` com base no `.env.example` e `também diretamente em back-end\src\database\config\config.ts`.
-    * Na pasta do back-end execute no seu terminal `npm start` (o back-end começará a rodar na porta 3001, o script irá popular um banco de dados com base nas variáveis de ambiente).
-    * Caso o `npm start` não rode corretamente, siga com seguintes comandos:
-  * `cd scripts`
-  * `chmod +x tsc_eval.sh`
-  * `chmod +x reset-db-dev.sh`
-  * tente o: `npm start` novamente
-  * ainda não funcionou? Siga com:
-  * `npm run build`
-  * `npm run db:reset`
-  * `npm run dev`
-
-# :recycle: Feedback sobre o desafio
-
-- A configuração do servidor na AWS foi um grande desafio pra mim, visto que ainda não havia criado um servidor com as ferramentas da AWS, acredito que com com a ajuda de um Senior Lead eu consegueria realizar essa tarefa com mais destreteza e eficiência.
-- Outro ponto que gostaria de expor, é que eu me identifiquei de verdade com a empresa e a proposta de trabalho, como mencionei na entrevista, o que mais prezo em um emprego é um ambiente de trabalho seguro e confortável para eu poder ser o mais produtivo possível, eu sinceramente, senti que a PM Capital passa esse sentimento, desde já agradeço a oportunidade.
-- No mais, foi um ótimo desafio. Coloquei em prática muitos dos meus conhecimentos do NodeJs, TypeScript e POO.
+   * `yarn dev / npm run dev`
