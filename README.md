@@ -9,11 +9,7 @@ por João Lage
 
 - [Descrição do projeto](#books-descrição-do-projeto)
 
-- [Melhorias possíveis](#construction-melhorias-possíveis)
-
 - [Stacks utilizadas](#books-stacks-utilizadas)
-
-- [Etapa mais desafiadora](#%EF%B8%8F-etapa-mais-desafiadora)
 
 - [Abrir e rodar o projeto](#%EF%B8%8F-abrir-e-rodar-o-projeto)
 
