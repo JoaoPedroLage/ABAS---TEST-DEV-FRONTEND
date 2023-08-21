@@ -71,7 +71,7 @@ O que foi pensado para o projeto:
 
 #  <img src="https://cdn.changelog.com/uploads/icons/news_sources/qGw/icon_small.png?v=63692097118" width='40px'/> &nbsp;Deploy no Vercel
 * A API foi colocada online através do Next.js e do Vercel que trabalham juntos, o uso do Next fez com que o deploy da aplicação fosse mais fácil e de fácil manutenibilidade.
-* Endereço online da aplicação: https://joao-lage-test-abas.vercel.app/
+* Endereço online da aplicação: https://bank-byte-joaopedrolage.vercel.app
 
 
 
